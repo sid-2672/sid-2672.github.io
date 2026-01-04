@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddharth Prabhu | AI Engineer and Data Scientist</title>
-    <meta name="description" content="Portfolio of Siddharth Prabhu - AI Engineer and Data Scientist specializing in RAG, Computer Vision, and Agentic Systems.">
+    <title>Siddharth Prabhu | AI Engineer</title>
+    <meta name="description" content="Portfolio of Siddharth Prabhu - AI Engineer specializing in RAG, Computer Vision, and Agentic Systems.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
     <script>
         tailwind.config = {
@@ -84,6 +86,22 @@
         
         .project-card:hover::before { opacity: 1; }
 
+        /* Skill Pills */
+        .skill-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #d1d5db;
+            transition: all 0.2s;
+        }
+        .skill-pill:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: white;
+        }
+
         /* Animated Background Blob */
         .bg-glow {
             position: fixed;
@@ -111,7 +129,9 @@
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <span class="text-xl font-bold tracking-tight text-white">Siddharth Prabhu</span>
             <div class="flex gap-6 text-sm font-medium text-gray-400">
+                <a href="#skills" class="hover:text-white transition">Skills</a>
                 <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#writing" class="hover:text-white transition">Writing</a>
                 <a href="resume.pdf" target="_blank" class="text-accent hover:text-blue-400 transition">Resume <i class="fas fa-arrow-right ml-1 text-xs"></i></a>
             </div>
         </div>
@@ -130,7 +150,7 @@
             </h1>
             
             <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                I am an AI Engineer and Data Scientist architecting resilient, offline-first systems. 
+                I am an AI Engineer architecting resilient, offline-first systems. 
                 Specializing in RAG, Agentic Workflows, and Edge Computer Vision.
             </p>
             
@@ -143,15 +163,67 @@
                 </a>
             </div>
 
-            <div class="mt-20 pt-10 border-t border-white/5">
-                <p class="text-sm text-gray-500 mb-6 uppercase tracking-widest">Tech Stack</p>
+            <div class="mt-20 animate-bounce">
+                <i class="fas fa-chevron-down text-gray-600"></i>
+            </div>
+            
+            <div class="mt-10 pt-10 border-t border-white/5">
                 <div class="flex flex-wrap justify-center gap-8 text-2xl text-gray-600">
                     <i class="fab fa-python hover:text-blue-400 transition" title="Python"></i>
                     <i class="fab fa-docker hover:text-blue-500 transition" title="Docker"></i>
                     <i class="fas fa-database hover:text-green-400 transition" title="Vector DBs"></i>
-                    <i class="fab fa-aws hover:text-orange-400 transition" title="Cloud"></i>
+                    <i class="fas fa-terminal hover:text-gray-200 transition" title="Linux/Bash"></i>
                     <i class="fas fa-brain hover:text-purple-400 transition" title="LLMs"></i>
-                    <i class="fab fa-linux hover:text-yellow-400 transition" title="Linux"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-white/5 border-y border-white/5 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-bold text-white mb-8 text-center md:text-left">Technical Arsenal</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Python 3.10+</span>
+                        <span class="skill-pill">SQL</span>
+                        <span class="skill-pill">Bash/Shell</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">AI Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">PyTorch</span>
+                        <span class="skill-pill">LangChain</span>
+                        <span class="skill-pill">Ollama</span>
+                        <span class="skill-pill">OpenVINO</span>
+                        <span class="skill-pill">Transformers</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Engineering</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Streamlit</span>
+                        <span class="skill-pill">FastAPI</span>
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">Linux</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-gray-400 text-sm uppercase tracking-widest mb-4">Core Concepts</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">RAG Systems</span>
+                        <span class="skill-pill">Agentic AI</span>
+                        <span class="skill-pill">Computer Vision</span>
+                        <span class="skill-pill">NLP</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -281,6 +353,29 @@
         </div>
     </section>
 
+    <section id="writing" class="py-20 bg-white/5 border-t border-white/5 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-2xl font-bold text-white">Engineering Writing</h2>
+                <a href="https://algorithm-alchemist.medium.com/" target="_blank" class="text-sm text-gray-400 hover:text-white transition">Read on Medium &rarr;</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="https://algorithm-alchemist.medium.com/data-defensibility-why-information-is-the-only-moat-that-lasts-d00b93be0bfa" target="_blank" class="project-card p-6 rounded-xl group block">
+                    <p class="text-xs text-blue-400 mb-2 uppercase tracking-wide">Data Strategy</p>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition">Data Defensibility: Why Information Is the Only Moat That Lasts</h3>
+                    <p class="text-gray-400 text-sm line-clamp-2">An analysis of why proprietary datasets constitute the only sustainable competitive advantage in the age of commoditized LLMs.</p>
+                </a>
+
+                <a href="https://algorithm-alchemist.medium.com/how-algorithms-quietly-decide-who-you-are-614cb8e16c81" target="_blank" class="project-card p-6 rounded-xl group block">
+                    <p class="text-xs text-purple-400 mb-2 uppercase tracking-wide">AI Ethics</p>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition">How Algorithms Quietly Decide Who You Are</h3>
+                    <p class="text-gray-400 text-sm line-clamp-2">A critique of how recommendation engines narrowly construct human identity into predictable feedback loops.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <footer class="border-t border-white/5 bg-black/20 backdrop-blur-sm">
         <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
@@ -290,6 +385,7 @@
             <div class="flex gap-6">
                 <a href="https://github.com/sid-2672" class="text-gray-400 hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
                 <a href="https://linkedin.com/in/siddharth-prabhu-593198249" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="https://algorithm-alchemist.medium.com/" class="text-gray-400 hover:text-white transition"><i class="fab fa-medium text-xl"></i></a>
                 <a href="mailto:siddharthprabhu22@gmail.com" class="text-gray-400 hover:text-red-400 transition"><i class="fas fa-envelope text-xl"></i></a>
             </div>
         </div>
