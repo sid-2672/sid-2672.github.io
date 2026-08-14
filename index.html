@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddharth Prabhu — AI Engineer, Edge Builder, Human</title>
+<meta name="description" content="AI Engineer building production RAG, edge computer vision, and agentic systems. IEEE-published, edge-first, and obsessive about systems that don't quietly break.">
+<link rel="canonical" href="https://sid-2672.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Siddharth Prabhu — AI Engineer, Edge Builder, Human">
+<meta property="og:description" content="AI Engineer building production RAG, edge computer vision, and agentic systems. IEEE-published, edge-first, and obsessive about systems that don't quietly break.">
+<meta property="og:url" content="https://sid-2672.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Siddharth Prabhu — AI Engineer, Edge Builder, Human">
+<meta name="twitter:description" content="AI Engineer building production RAG, edge computer vision, and agentic systems. IEEE-published, edge-first, and obsessive about systems that don't quietly break.">
+
+<meta name="theme-color" content="#0a0a08" id="theme-color-meta">
+
+<script>
+  // Runs before first paint to avoid a flash of the wrong theme.
+  (function () {
+    var saved = localStorage.getItem('theme');
+    var light = saved ? saved === 'light' : window.matchMedia('(prefers-color-scheme: light)').matches;
+    if (light) document.documentElement.setAttribute('data-theme', 'light');
+  })();
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a08'/%3E%3Ctext x='50' y='70' font-family='monospace' font-size='62' font-weight='700' fill='%23c8f135' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<div id="konami" role="dialog" aria-modal="true" aria-label="Easter egg">
+  <div class="msg">you found me 👾</div>
+  <div class="sub">↑↑↓↓←→←→BA — AI engineer detected</div>
+  <button class="close-egg" id="konami-close">close this magic</button>
+</div>
+
+<nav aria-label="Primary">
+  <a href="#hero" class="nav-logo">sid_2672<span style="color:var(--orange)">.</span></a>
+  <ul class="nav-links">
+    <li><a href="#experience">Work</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#writing">Writing</a></li>
+  </ul>
+  <div class="nav-actions">
+    <span class="audience-pill" id="audience-pill">
+      <span id="audience-pill-text">Viewing as recruiter</span>
+      <button type="button" id="audience-pill-reset">switch</button>
+    </span>
+    <button id="theme-toggle" class="theme-btn" aria-label="Switch to light theme" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"></path></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"></line><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"></line><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"></line></svg>
+    </button>
+    <button class="nav-cta" id="resume-trigger" type="button" aria-haspopup="dialog">Resume ↗</button>
+    <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#experience">Work</a>
+  <a href="#projects">Projects</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#writing">Writing</a>
+  <a href="#now">Now</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main id="main">
+
+<section id="hero">
+  <div class="hero-eyebrow">Available for opportunities · Bengaluru, India</div>
+
+  <h1 class="hero-name">
+    <span class="line1">Siddharth</span>
+    <span class="line2">Prabhu.</span>
+  </h1>
+
+  <p class="hero-title">
+    AI Engineer building <span class="highlight">production-grade systems</span> that don't break at 3am.<br>
+    RAG pipelines, edge vision, and agentic workflows — the fun stuff.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Let's build something →</a>
+    <a href="https://github.com/sid-2672" target="_blank" rel="noopener" class="btn-secondary">GitHub ↗</a>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num" id="counter1">0</div>
+      <div class="stat-label">ms p95 latency (RAG)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="counter2">0</div>
+      <div class="stat-label">% doc time saved</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="counter3">0</div>
+      <div class="stat-label">RTSP streams @ 30fps</div>
+    </div>
+  </div>
+
+  <div class="rotating-badge" aria-hidden="true">
+    <svg viewBox="0 0 200 200" width="200" height="200">
+      <defs>
+        <path id="circle-text" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"/>
+      </defs>
+      <text fill="var(--lime)" font-family="Space Mono, monospace" font-size="12" letter-spacing="3" style="transition: fill 0.4s ease;">
+        <textPath href="#circle-text">AI ENGINEER · EDGE BUILDER · WRITER · MAKER · </textPath>
+      </text>
+    </svg>
+    <div class="badge-center">🤖</div>
+  </div>
+</section>
+
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">Python <span class="dot">✦</span></div>
+    <div class="marquee-item">LangChain <span class="dot">✦</span></div>
+    <div class="marquee-item">RAG Systems <span class="dot">✦</span></div>
+    <div class="marquee-item">OpenVINO <span class="dot">✦</span></div>
+    <div class="marquee-item">YOLOv11 <span class="dot">✦</span></div>
+    <div class="marquee-item">BoT-SORT <span class="dot">✦</span></div>
+    <div class="marquee-item">FastAPI <span class="dot">✦</span></div>
+    <div class="marquee-item">Milvus <span class="dot">✦</span></div>
+    <div class="marquee-item">Docker <span class="dot">✦</span></div>
+    <div class="marquee-item">Gemini API <span class="dot">✦</span></div>
+    <div class="marquee-item">Llama 3 <span class="dot">✦</span></div>
+    <div class="marquee-item">Deepgram <span class="dot">✦</span></div>
+    <div class="marquee-item">asyncio <span class="dot">✦</span></div>
+    <div class="marquee-item">IEEE Published <span class="dot">✦</span></div>
+    <div class="marquee-item">Python <span class="dot">✦</span></div>
+    <div class="marquee-item">LangChain <span class="dot">✦</span></div>
+    <div class="marquee-item">RAG Systems <span class="dot">✦</span></div>
+    <div class="marquee-item">OpenVINO <span class="dot">✦</span></div>
+    <div class="marquee-item">YOLOv11 <span class="dot">✦</span></div>
+    <div class="marquee-item">BoT-SORT <span class="dot">✦</span></div>
+    <div class="marquee-item">FastAPI <span class="dot">✦</span></div>
+    <div class="marquee-item">Milvus <span class="dot">✦</span></div>
+    <div class="marquee-item">Docker <span class="dot">✦</span></div>
+    <div class="marquee-item">Gemini API <span class="dot">✦</span></div>
+    <div class="marquee-item">Llama 3 <span class="dot">✦</span></div>
+    <div class="marquee-item">Deepgram <span class="dot">✦</span></div>
+    <div class="marquee-item">asyncio <span class="dot">✦</span></div>
+    <div class="marquee-item">IEEE Published <span class="dot">✦</span></div>
+  </div>
+</div>
+
+<section id="audience" aria-labelledby="audience-heading">
+  <h2 class="audience-heading" id="audience-heading">Reading this as—</h2>
+  <p class="audience-sub">Pick one. It changes what floats to the top and what the résumé button gives you — not what's actually true. Everything on this site is here either way.</p>
+  <div class="audience-grid" role="group" aria-label="Choose how the site should prioritize content for you">
+    <button class="audience-card" data-audience="recruiter" aria-pressed="false">
+      <span class="audience-card-icon" aria-hidden="true">💼</span>
+      <span class="audience-card-title">Hiring for a role</span>
+      <span class="audience-card-desc">Production systems first, stack second, résumé one click away.</span>
+    </button>
+    <button class="audience-card" data-audience="professor" aria-pressed="false">
+      <span class="audience-card-icon" aria-hidden="true">🔬</span>
+      <span class="audience-card-title">Advising or researching</span>
+      <span class="audience-card-desc">Research interests, the published paper, and how I think about problems — not just what shipped.</span>
+    </button>
+    <button class="audience-card" data-audience="curious" aria-pressed="false">
+      <span class="audience-card-icon" aria-hidden="true">👋</span>
+      <span class="audience-card-title">Just poking around</span>
+      <span class="audience-card-desc">No filter. Full site, my order.</span>
+    </button>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-left reveal">
+    <div class="section-tag">About</div>
+    <h2 class="about-heading" id="about-heading">Making AI that<br>actually <em>works</em><br>in the wild.</h2>
+    <p class="about-text">I'm a Data Science &amp; AI Engineer at nhance.ai, where I spend my days wrangling edge deployments, building RAG pipelines that don't hallucinate, and making production systems that quietly run without drama.</p>
+    <p class="about-text">B.E. in Electronics &amp; Communication from Siddaganga Institute of Technology. NCC Sergeant. Published at IEEE. Writes on Medium about algorithms, AI burnout, and things that make me think too hard at 2am.</p>
+    <p class="about-text">I like building things that are <em style="color:var(--lime);font-style:normal;">fast, honest, and a little bit clever.</em></p>
+  </div>
+  <div class="about-right reveal">
+    <div class="fact-card">
+      <div class="fact-icon" aria-hidden="true">📍</div>
+      <div>
+        <div class="fact-title">Based in Bengaluru</div>
+        <div class="fact-desc">Open to on-site, hybrid, or remote opportunities</div>
+      </div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-icon" aria-hidden="true">⚡</div>
+      <div>
+        <div class="fact-title">Edge-first mindset</div>
+        <div class="fact-desc">Models should run where the data lives — not in some distant cloud</div>
+      </div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-icon" aria-hidden="true">🎖️</div>
+      <div>
+        <div class="fact-title">NCC Sergeant</div>
+        <div class="fact-desc">Leadership, discipline, and not crying when code fails — learned here</div>
+      </div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-icon" aria-hidden="true">✍️</div>
+      <div>
+        <div class="fact-title">Medium writer</div>
+        <div class="fact-desc">@algorithm-alchemist — honest takes on AI, data, and the industry</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="experience-heading">
+  <div class="exp-header reveal">
+    <div>
+      <div class="section-tag">Experience</div>
+      <h2 class="section-heading" id="experience-heading">Where I've<br>shipped things.</h2>
+    </div>
+  </div>
+
+  <div class="exp-item reveal">
+    <div class="exp-meta">
+      <div class="exp-date">Sept 2024 — Present</div>
+      <div class="exp-company">nhance.ai</div>
+      <div class="exp-loc">Bengaluru · On-site</div>
+    </div>
+    <div class="exp-content">
+      <h3 class="exp-role">Data Science &amp; AI Engineer</h3>
+      <ul class="exp-bullets">
+        <li>Architected a full MERN-stack configurator automating SOW, BOQ, BRD, and proposal workflows — cut document turnaround by <strong>over 90%</strong> (hours → minutes)</li>
+        <li>Built an edge video-analytics pipeline processing <strong>5 concurrent RTSP streams at 30 FPS</strong> using YOLOv11 + BoT-SORT; cut inference latency <strong>150ms → 90ms (40%)</strong> through OpenVINO graph optimization</li>
+        <li>Shipped a production RAG assistant over <strong>10k+ technical documents</strong> using Milvus hybrid (dense + sparse) retrieval, treating p95 — not mean — latency as the metric that matters, held under <strong>250ms</strong></li>
+        <li>Designed multimodal document-intelligence workflows with Gemini for summarization, Q&amp;A, and structured extraction across native PDFs and scanned images</li>
+        <li>Trained and supervised two interns across edge video analytics and RAG</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="exp-tag">RAG</span>
+        <span class="exp-tag">OpenVINO</span>
+        <span class="exp-tag">Milvus</span>
+        <span class="exp-tag">MERN</span>
+        <span class="exp-tag">FastAPI</span>
+        <span class="exp-tag">Docker</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item reveal">
+    <div class="exp-meta">
+      <div class="exp-date">Aug — Sep 2024</div>
+      <div class="exp-company">M.Tech Solutions</div>
+      <div class="exp-loc">Bengaluru · On-site</div>
+    </div>
+    <div class="exp-content">
+      <h3 class="exp-role">Information Security Intern</h3>
+      <ul class="exp-bullets">
+        <li>Automated threat analysis across <strong>40+ security datasets</strong> in Python, improving assessment turnaround by <strong>25%</strong></li>
+        <li>Hardened access-control infrastructure through Role-Based Access Control (RBAC) implementation</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="exp-tag">Python</span>
+        <span class="exp-tag">RBAC</span>
+        <span class="exp-tag">Cybersecurity</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" aria-labelledby="projects-heading">
+  <div class="reveal">
+    <div class="section-tag">Projects</div>
+    <h2 class="section-heading" id="projects-heading">Things I've built<br>and shipped.</h2>
+    <p class="adaptive-note" id="projects-adaptive-note" aria-live="polite"></p>
+  </div>
+
+  <div class="projects-grid" id="projects-grid">
+
+    <article class="project-card reveal" data-order-recruiter="4" data-order-professor="1">
+      <div class="project-num">01</div>
+      <a class="project-name-link" href="https://github.com/sid-2672/Voice-agent" target="_blank" rel="noopener">
+        <h3 class="project-name">Real-Time Voice Agent (Jarvis)</h3>
+      </a>
+      <p class="project-desc">Full-duplex voice agent, &lt;500ms latency. An asyncio triple-loop architecture streams Deepgram STT/TTS around a Groq Llama 3.1 token stream — feels like a phone call, not a chatbot with a microphone bolted on.</p>
+      <div class="project-footer">
+        <div class="proj-tags"><span class="proj-tag">asyncio</span><span class="proj-tag">Deepgram</span><span class="proj-tag">Groq Llama 3.1</span></div>
+        <a class="project-repo-link" href="https://github.com/sid-2672/Voice-agent" target="_blank" rel="noopener" aria-label="View Voice Agent repository">↗</a>
+      </div>
+      <button class="project-detail-toggle" aria-expanded="false">Technical depth <span class="chevron" aria-hidden="true">⌄</span></button>
+      <dl class="project-detail">
+        <dt>Problem</dt>
+        <dd>Minimizing <em>perceived</em> latency in a cascaded speech → LLM → speech pipeline, where the dominant cost is serialization between stages, not any single model's inference time.</dd>
+        <dt>Approach</dt>
+        <dd>Three concurrent loops (listen / think / speak) coordinated by lock-free thread-safe queues; LLM tokens stream directly into speech synthesis instead of waiting for full generation.</dd>
+        <dt>Engineering hurdle</dt>
+        <dd>An adaptive TTS flush policy (punctuation-boundary or 30-character triggers) trading time-to-first-audio against natural prosody, plus an RMS noise gate and minimum-utterance filter to reject false barge-in from background noise. Also had to work around a Linux ALSA/PulseAudio bug where the mic would initialize successfully and capture zero bytes.</dd>
+        <dt>Result</dt>
+        <dd>&lt;500ms end-to-end response, &lt;300ms perceived latency to first audio.</dd>
+      </dl>
+    </article>
+
+    <article class="project-card reveal" data-order-recruiter="2" data-order-professor="2">
+      <div class="project-num">02</div>
+      <a class="project-name-link" href="https://github.com/sid-2672/Video-analytics-pipeline" target="_blank" rel="noopener">
+        <h3 class="project-name">Self-Healing Video Analytics Pipeline</h3>
+      </a>
+      <p class="project-desc">People-counting system running YOLOv11 + BoT-SORT as distributed worker processes under a supervisor that detects and restarts crashed or frozen workers — built to run unattended for days, not to win a benchmark.</p>
+      <div class="project-footer">
+        <div class="proj-tags"><span class="proj-tag">YOLOv11</span><span class="proj-tag">BoT-SORT</span><span class="proj-tag">OpenCV</span></div>
+        <a class="project-repo-link" href="https://github.com/sid-2672/Video-analytics-pipeline" target="_blank" rel="noopener" aria-label="View Video Analytics Pipeline repository">↗</a>
+      </div>
+      <button class="project-detail-toggle" aria-expanded="false">Technical depth <span class="chevron" aria-hidden="true">⌄</span></button>
+      <dl class="project-detail">
+        <dt>Problem</dt>
+        <dd>Long-running unattended perception systems fail quietly — a frozen worker looks identical to a healthy one from the outside.</dd>
+        <dt>Approach</dt>
+        <dd>A central supervisor process monitors and auto-restarts crashed or frozen workers. Directional entry/exit counts are derived from tracker trajectories using line-crossing gate logic over persistent object identities, not raw per-frame detections.</dd>
+        <dt>Engineering hurdle</dt>
+        <dd>Exposing live CPU/GPU/memory telemetry alongside throughput, so degradation is visible before it becomes an outage instead of after.</dd>
+        <dt>Note</dt>
+        <dd>The self-healing/supervisor pattern here is the same one behind the 5-stream RTSP pipeline I run at nhance.ai — this is the personal, from-scratch version, built independently to go deeper on the reliability side.</dd>
+      </dl>
+    </article>
+
+    <article class="project-card reveal" data-order-recruiter="3" data-order-professor="4">
+      <div class="project-num">03</div>
+      <a class="project-name-link" href="https://github.com/sid-2672/Multimodal-document-processing-system" target="_blank" rel="noopener">
+        <h3 class="project-name">Multimodal Document QA</h3>
+      </a>
+      <p class="project-desc">Document QA service with per-modality ingestion — native PDF text, row-wise Excel parsing, OCR for scanned images — behind /upload and /query REST endpoints, containerized with Docker.</p>
+      <div class="project-footer">
+        <div class="proj-tags"><span class="proj-tag">FastAPI</span><span class="proj-tag">Milvus</span><span class="proj-tag">Gemini</span></div>
+        <a class="project-repo-link" href="https://github.com/sid-2672/Multimodal-document-processing-system" target="_blank" rel="noopener" aria-label="View Multimodal Document QA repository">↗</a>
+      </div>
+      <button class="project-detail-toggle" aria-expanded="false">Technical depth <span class="chevron" aria-hidden="true">⌄</span></button>
+      <dl class="project-detail">
+        <dt>Problem</dt>
+        <dd>A single ingestion path can't handle PDFs, spreadsheets, and scanned images equally well.</dd>
+        <dt>Approach</dt>
+        <dd>The ingestion stage auto-detects file type and adapts: Tesseract OCR for images, row-wise parsing for Excel, direct extraction for digital PDFs — then embeds into Milvus for retrieval.</dd>
+        <dt>Note</dt>
+        <dd>Same category of system as the RAG assistant I run in production over 10k+ documents at nhance.ai, built independently to go deeper on the ingestion side specifically.</dd>
+      </dl>
+    </article>
+
+    <article class="project-card reveal" data-order-recruiter="1" data-order-professor="6">
+      <div class="project-num">04</div>
+      <a class="project-name-link" href="https://github.com/sid-2672/financial-chatbot" target="_blank" rel="noopener">
+        <h3 class="project-name">Financial Chatbot</h3>
+      </a>
+      <p class="project-desc">An agent that writes and executes real Python against your portfolio data instead of guessing numbers — LangChain + Gemini 2.5 Flash with explicit anti-hallucination guardrails.</p>
+      <div class="project-footer">
+        <div class="proj-tags"><span class="proj-tag">LangChain</span><span class="proj-tag">Gemini</span><span class="proj-tag">Streamlit</span></div>
+        <a class="project-repo-link" href="https://github.com/sid-2672/financial-chatbot" target="_blank" rel="noopener" aria-label="View Financial Chatbot repository">↗</a>
+      </div>
+      <button class="project-detail-toggle" aria-expanded="false">Technical depth <span class="chevron" aria-hidden="true">⌄</span></button>
+      <dl class="project-detail">
+        <dt>Problem</dt>
+        <dd>LLMs are unreliable at arithmetic; most "chat with your data" demos quietly hallucinate numbers.</dd>
+        <dt>Approach</dt>
+        <dd>Pandas dataframes are treated as tools the agent can call — it writes actual filter/aggregate code against Holdings and Trades data and executes it, so a wrong answer traces back to bad data, not a hallucinated one.</dd>
+        <dt>Guardrail</dt>
+        <dd>Explicit instruction to refuse out-of-scope questions rather than answer generically, keeping the agent scoped to what it can actually verify.</dd>
+      </dl>
+    </article>
+
+    <article class="project-card reveal" data-order-recruiter="6" data-order-professor="3">
+      <div class="project-num">05</div>
+      <a class="project-name-link" href="https://github.com/sid-2672/End-to-end-sentiment-analysis-dashboard" target="_blank" rel="noopener">
+        <h3 class="project-name">Sentiment Analysis Dashboard</h3>
+      </a>
+      <p class="project-desc">Four sentiment models — Logistic Regression, Naive Bayes, a BiLSTM, and a fine-tuned DistilBERT — trained on IMDB reviews and compared side by side in one live dashboard.</p>
+      <div class="project-footer">
+        <div class="proj-tags"><span class="proj-tag">PyTorch</span><span class="proj-tag">DistilBERT</span><span class="proj-tag">scikit-learn</span></div>
+        <a class="project-repo-link" href="https://github.com/sid-2672/End-to-end-sentiment-analysis-dashboard" target="_blank" rel="noopener" aria-label="View Sentiment Analysis Dashboard repository">↗</a>
+      </div>
+      <button class="project-detail-toggle" aria-expanded="false">Technical depth <span class="chevron" aria-hidden="true">⌄</span></button>
+      <dl class="project-detail">
+        <dt>Purpose</dt>
+        <dd>A direct comparison of classical ML, RNN, and Transformer approaches on the same task and dataset, with real-time inference and basic explainability (feature importance for the logistic regression model).</dd>
+        <dt>Note</dt>
+        <dd>A personal ML-fundamentals project — not IEEE-published. The published paper is the traffic-surveillance work in <a href="#publications">Publications</a> below.</dd>
+      </dl>
+    </article>
+
+    <article class="project-card reveal" data-order-recruiter="5" data-order-professor="5">
+      <div class="project-num">06</div>
+      <a class="project-name-link" href="https://github.com/sid-2672/Autonomous-Analytics-Agent" target="_blank" rel="noopener">
+        <h3 class="project-name">Autonomous Analytics Agent</h3>
+      </a>
+      <p class="project-desc">A local-first multi-agent system (Cleaner → EDA → Modeler → Visualizer → Insight) that runs a full analytics workflow end-to-end on local LLMs via Ollama — no external API calls, no data leaving the machine.</p>
+      <div class="project-footer">
+        <div class="proj-tags"><span class="proj-tag">Multi-agent</span><span class="proj-tag">Ollama</span><span class="proj-tag">Streamlit</span></div>
+        <a class="project-repo-link" href="https://github.com/sid-2672/Autonomous-Analytics-Agent" target="_blank" rel="noopener" aria-label="View Autonomous Analytics Agent repository">↗</a>
+      </div>
+      <button class="project-detail-toggle" aria-expanded="false">Technical depth <span class="chevron" aria-hidden="true">⌄</span></button>
+      <dl class="project-detail">
+        <dt>Approach</dt>
+        <dd>A hierarchical dispatch model — an orchestration engine plans the task and routes it through specialized agents, each with one narrow responsibility, sharing state through a common memory layer.</dd>
+        <dt>Why local</dt>
+        <dd>Zero inference cost and no data leaving the machine — a real constraint for sensitive analytics data, not just a cost-saving trick.</dd>
+      </dl>
+    </article>
+
+  </div>
+
+  <div style="margin-top:32px;text-align:right;">
+    <a href="https://github.com/sid-2672" target="_blank" rel="noopener" style="font-family:var(--font-mono);font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:0.1em;">All repositories on GitHub →</a>
+  </div>
+</section>
+
+<section id="research" aria-labelledby="research-heading">
+  <div class="reveal">
+    <div class="section-tag">Research Direction</div>
+    <h2 class="section-heading" id="research-heading">Where the engineering<br>turns into a question.</h2>
+  </div>
+  <div class="research-grid">
+    <div class="research-intro reveal">
+      <p>My interest sits somewhere between the method and the deployment: how detection and tracking models actually behave under real constraints — limited compute, several concurrent streams, processes that have to stay up for days without anyone watching them — and how much you can make them faster and more reliable without quietly giving up accuracy.</p>
+      <p>Most of what's on this page came from shipping a system first and getting curious about the "why" underneath it second, not the other way around. That's probably the honest description of where I am right now: an engineer who keeps finding a research question hiding under a deployment problem.</p>
+      <p style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase; margin-top:24px;">Areas I keep returning to</p>
+      <div class="exp-tags" style="margin-top:12px;">
+        <span class="exp-tag">Computer Vision &amp; Video Understanding</span>
+        <span class="exp-tag">Real-Time / Low-Latency Systems</span>
+        <span class="exp-tag">Efficient Inference &amp; Edge Deployment</span>
+        <span class="exp-tag">Multi-Object Tracking</span>
+        <span class="exp-tag">Multimodal Document Understanding</span>
+        <span class="exp-tag">Retrieval-Augmented &amp; Agentic LLM Systems</span>
+      </div>
+    </div>
+    <div class="research-questions reveal" aria-label="Questions I'm exploring">
+      <div class="research-q">
+        <span class="research-q-num">01</span>
+        <span class="research-q-text">How much accuracy do you actually give up making a detection/tracking model edge-deployable — and is that floor fixed, or a function of how carefully you optimize the graph?</span>
+      </div>
+      <div class="research-q">
+        <span class="research-q-num">02</span>
+        <span class="research-q-text">For a RAG system, is p95 latency actually the right thing to optimize, or just the easiest one to measure? What would it mean to measure whether retrieved context is <em>right</em>, not just fast?</span>
+      </div>
+      <div class="research-q">
+        <span class="research-q-num">03</span>
+        <span class="research-q-text">Adaptive per-modality ingestion — OCR here, direct parsing there — gets you pretty far on multimodal documents. Where does that stitched-pipeline approach actually break, and is that the point where a real multimodal model earns its cost?</span>
+      </div>
+      <div class="research-q">
+        <span class="research-q-num">04</span>
+        <span class="research-q-text">Long-running, unattended perception systems fail differently than benchmark runs do. What would it take to actually define "reliable" for a system that has to stay correct for weeks, not for one held-out test set?</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications" aria-labelledby="publications-heading">
+  <div class="reveal">
+    <div class="section-tag">Publications</div>
+    <h2 class="section-heading" id="publications-heading">Published,<br>peer-reviewed.</h2>
+  </div>
+  <div class="publication-card reveal">
+    <div class="pub-venue">IEEE ESCI 2024</div>
+    <h3 class="pub-title">Image Processing Based Traffic Surveillance</h3>
+    <p class="pub-authors">S. Prabhu, et al. <span style="opacity:0.7;">— full author order pending confirmation from IEEE Xplore</span></p>
+    <div class="pub-body">
+      <dl>
+        <dt>Problem</dt>
+        <dd>Manual enforcement of two-wheeler traffic law is limited in coverage and inconsistently applied. This project asked whether commodity surveillance footage alone is enough to detect a violation and attribute it to a specific vehicle.</dd>
+        <dt>Dataset</dt>
+        <dd>5,000+ traffic-surveillance frames, co-collected and manually annotated (Roboflow) for helmet use, triple-riding, and mobile-phone use while riding.</dd>
+        <dt>Method</dt>
+        <dd>A custom convolutional network for multi-violation classification, coupled to a downstream license-plate localization and character-extraction stage — so a detected violation resolves to an identifiable vehicle, not just a flagged frame.</dd>
+        <dt>Result</dt>
+        <dd>92% F1-score on held-out annotated frames. Accepted and published in the IEEE ESCI 2024 proceedings, indexed in IEEE Xplore.</dd>
+        <dt>Code</dt>
+        <dd>Not public — this was a final-year academic project; the codebase sits with the institution rather than a personal repository.</dd>
+      </dl>
+    </div>
+    <div class="pub-links">
+      <a href="https://ieeexplore.ieee.org/document/10561319" target="_blank" rel="noopener">IEEE Xplore: 10561319 ↗</a>
+    </div>
+    <p class="pub-note">Author order shown provisionally — happy to swap in the exact IEEE Xplore listing on request.</p>
+  </div>
+</section>
+
+<section id="skills" aria-labelledby="skills-heading">
+  <div class="skills-inner">
+    <div class="reveal">
+      <div class="section-tag">Tech Stack</div>
+      <h2 class="section-heading" id="skills-heading">The tools<br>I actually use.</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-cat-name">Languages</div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot" style="background:var(--lime)"></span>Python</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--lime)"></span>JavaScript</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--lime)"></span>SQL</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--lime)"></span>Bash</div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-name">GenAI &amp; LLM</div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot" style="background:var(--sky)"></span>LangChain</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--sky)"></span>RAG · hybrid retrieval</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--sky)"></span>Milvus / FAISS</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--sky)"></span>Agents (ReAct, multi-agent)</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--sky)"></span>Gemini / OpenAI / Llama 3</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--sky)"></span>Prompt Engineering</div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-name">Vision &amp; Edge</div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot" style="background:var(--orange)"></span>OpenVINO</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--orange)"></span>YOLOv8 / v11</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--orange)"></span>BoT-SORT</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--orange)"></span>OpenCV</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--orange)"></span>PyTorch / TensorFlow</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--orange)"></span>CNN / LSTM / RNN</div>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-name">Backend &amp; DevOps</div>
+        <div class="skill-list">
+          <div class="skill-item"><span class="skill-dot" style="background:var(--pink)"></span>FastAPI · asyncio · WebSockets</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--pink)"></span>Node.js / React</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--pink)"></span>MongoDB</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--pink)"></span>Docker</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--pink)"></span>Git / CI/CD</div>
+          <div class="skill-item"><span class="skill-dot" style="background:var(--pink)"></span>Linux (Fedora/Ubuntu) · n8n</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" aria-labelledby="writing-heading">
+  <div class="reveal">
+    <div class="section-tag">Writing</div>
+    <h2 class="section-heading" id="writing-heading">Thoughts on AI,<br>loud and honest.</h2>
+  </div>
+  <div class="writing-grid">
+    <a href="https://algorithm-alchemist.medium.com/mlops-as-a-gif-2b6028bd7330" target="_blank" rel="noopener" class="writing-card reveal">
+      <div class="writing-date">Jun 2026</div>
+      <div class="writing-title">MLOps as a GIF</div>
+      <div class="writing-excerpt">Turning MLOps concepts into a single looping image — because some ideas click faster as a picture than a paragraph.</div>
+    </a>
+    <a href="https://algorithm-alchemist.medium.com/i-ditched-windows-11-for-linux-stress-testing-6-distros-on-a-gaming-laptop-866de2d7bdb0" target="_blank" rel="noopener" class="writing-card reveal">
+      <div class="writing-date">Apr 2026</div>
+      <div class="writing-title">I Ditched Windows 11 for Linux: Stress-Testing 6 Distros on a Gaming Laptop</div>
+      <div class="writing-excerpt">From bloatware fatigue to finding the perfect gaming OS. RTX 1650, Ryzen, and some strong opinions.</div>
+    </a>
+    <a href="https://algorithm-alchemist.medium.com/escaping-mlops-tutorial-hell-architecting-pipelines-from-first-principles-79d9b3e8a7a3" target="_blank" rel="noopener" class="writing-card reveal">
+      <div class="writing-date">Apr 2026</div>
+      <div class="writing-title">Escaping MLOps Tutorial Hell: Architecting Pipelines from First Principles</div>
+      <div class="writing-excerpt">You're staring at two monitors. One has a YouTube tutorial. The other has your broken pipeline. There's a better way.</div>
+    </a>
+    <a href="https://algorithm-alchemist.medium.com/how-algorithms-quietly-decide-who-you-are-614cb8e16c81" target="_blank" rel="noopener" class="writing-card reveal">
+      <div class="writing-date">Oct 2025</div>
+      <div class="writing-title">How Algorithms Quietly Decide Who You Are</div>
+      <div class="writing-excerpt">And why that should freak you out... just a little. A deep dive into recommendation engines and identity.</div>
+    </a>
+  </div>
+  <div class="writing-more reveal">
+    <a href="https://algorithm-alchemist.medium.com/" target="_blank" rel="noopener">Read all articles on Medium ↗</a>
+  </div>
+</section>
+
+<section id="now" aria-labelledby="now-heading">
+  <div class="reveal">
+    <div class="section-tag">Now</div>
+    <h2 class="section-heading" id="now-heading">What's actually<br>on my desk.</h2>
+  </div>
+  <div class="now-grid">
+    <div class="now-card reveal">
+      <div class="now-label">Building</div>
+      <div class="now-text">A local, offline-first study copilot — chat-with-notes, quizzes, flashcards — running entirely on Ollama. No cloud, no API key, notes never leave the machine.</div>
+      <div class="now-meta">Student-Copilot-Local · last touched Mar 2026</div>
+    </div>
+    <div class="now-card reveal">
+      <div class="now-label">Writing</div>
+      <div class="now-text">Trying to explain MLOps concepts as single images instead of paragraphs. Turns out a tighter constraint makes you a clearer writer, not a lazier one.</div>
+      <div class="now-meta">Latest on Medium · Jun 2026</div>
+    </div>
+    <div class="now-card reveal">
+      <div class="now-label">Applying</div>
+      <div class="now-text">Putting together Master's and research applications. This site exists partly because "send me your resume" undersells what I actually want a professor or a recruiter to see.</div>
+      <div class="now-meta">Ongoing</div>
+    </div>
+  </div>
+</section>
+
+<section id="fun" aria-hidden="true">
+  <div class="fun-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <h2 class="fun-heading">
+    <span class="word1">Build.</span>
+    <span class="word2">Ship.</span>
+    <span class="word3">Repeat.</span>
+  </h2>
+  <p class="fun-sub">— and occasionally write about it — try ↑↑↓↓←→←→BA</p>
+</section>
+
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="reveal">
+    <div class="section-tag">Contact</div>
+    <h2 class="contact-heading" id="contact-heading">Let's make<br>something <span>good.</span></h2>
+    <p class="contact-text">I'm open to full-time roles, interesting projects, and conversations about AI systems that actually work in production. If you have something worth building, I want to hear about it.</p>
+    <a href="mailto:siddharthprabhu22@gmail.com" class="contact-email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><polyline points="2,6 12,13 22,6"></polyline></svg>
+      siddharthprabhu22@gmail.com
+    </a>
+  </div>
+
+  <div class="reveal">
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/siddharth-prabhu-/" target="_blank" rel="noopener" class="contact-link-item">
+        <div class="link-left">
+          <div class="link-icon" aria-hidden="true">IN</div>
+          <div>
+            <div class="link-name">LinkedIn</div>
+            <div class="link-handle">siddharth-prabhu-</div>
+          </div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a href="https://github.com/sid-2672" target="_blank" rel="noopener" class="contact-link-item">
+        <div class="link-left">
+          <div class="link-icon" aria-hidden="true">GH</div>
+          <div>
+            <div class="link-name">GitHub</div>
+            <div class="link-handle">sid-2672</div>
+          </div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a href="https://algorithm-alchemist.medium.com/" target="_blank" rel="noopener" class="contact-link-item">
+        <div class="link-left">
+          <div class="link-icon" aria-hidden="true">MD</div>
+          <div>
+            <div class="link-name">Medium</div>
+            <div class="link-handle">algorithm-alchemist</div>
+          </div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a href="https://sid-2672.github.io/" target="_blank" rel="noopener" class="contact-link-item">
+        <div class="link-left">
+          <div class="link-icon" aria-hidden="true">WWW</div>
+          <div>
+            <div class="link-name">Portfolio</div>
+            <div class="link-handle">sid-2672.github.io</div>
+          </div>
+        </div>
+        <span class="link-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-left">© 2026 Siddharth Prabhu · Bengaluru, India</div>
+  <div class="footer-right">Built with ☕ and strong opinions</div>
+</footer>
+
+<!-- RESUME ROUTER -->
+<div class="router-overlay" id="router-overlay">
+  <div class="router-panel" role="dialog" aria-modal="true" aria-labelledby="router-heading" id="router-panel">
+    <button class="router-close" id="router-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+    </button>
+    <div class="router-eyebrow">Resume ↗</div>
+    <h2 class="router-heading" id="router-heading">Which one do you need?</h2>
+    <div class="router-options">
+      <div class="router-option">
+        <div class="router-option-title">Recruiter / Industry Resume</div>
+        <div class="router-option-desc">One page. Production experience, shipped systems, stack, verified numbers.</div>
+        <div class="router-option-actions">
+          <a class="router-btn primary" href="Siddharth_Prabhu_Resume_2026.pdf" target="_blank" rel="noopener" data-audience-choice="recruiter">View</a>
+          <a class="router-btn" href="Siddharth_Prabhu_Resume_2026.pdf" download>Download</a>
+        </div>
+      </div>
+      <div class="router-option">
+        <div class="router-option-title">Academic CV</div>
+        <div class="router-option-desc">Research interests, the IEEE publication, and technical depth on architecture and evaluation.</div>
+        <div class="router-option-actions">
+          <a class="router-btn primary" href="Siddharth_Prabhu_Academic_CV.pdf" target="_blank" rel="noopener" data-audience-choice="professor">View</a>
+          <a class="router-btn" href="Siddharth_Prabhu_Academic_CV.pdf" download>Download</a>
+        </div>
+      </div>
+    </div>
+    <p class="router-footnote">Not sure? <button type="button" id="router-to-audience">Tell the site who you are →</button></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
